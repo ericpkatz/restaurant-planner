@@ -11,8 +11,7 @@ const render = (restaurants, reservations)=> {
         <select>
           <option value=''>Choose A Restaurant</option>
           ${
-              filtered
-              .map( restaurant => {
+              filtered.map( restaurant => {
                 return `
                   <option value='${restaurant.id}'>
                     ${ restaurant.name }
@@ -32,8 +31,7 @@ const render = (restaurants, reservations)=> {
         <h2>Reservations</h2>
         <ul>
           ${
-              reservations 
-              .map( reservation => {
+              reservations.map( reservation => {
                 const restaurant = restaurants.find(restaurant => restaurant.id === reservation.restaurantId);
                 return `
                   <li data-id='${reservation.id}'>
@@ -48,7 +46,6 @@ const render = (restaurants, reservations)=> {
   const reservationPanel = document.querySelector('#reservations');
   reservationPanel.innerHTML = html;
 };
-
 
 const init = async()=> {
   try {

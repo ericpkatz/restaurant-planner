@@ -7,7 +7,8 @@
     "postinstall": "webpack",
     "start:dev": "npm run start-server & npm run build-watch",
     "start-server": "nodemon server --ignore public --ignore client/",
-    "build-watch": "webpack -w"
+    "build-watch": "webpack -w",
+    "start": "node server/"
   },
   "keywords": [],
   "author": "",
